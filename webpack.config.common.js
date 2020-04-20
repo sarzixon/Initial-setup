@@ -1,31 +1,31 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: "./src/js/index.js",
+  entry: './src/js/index.js',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
   },
   devServer: {
     inline: true,
     port: 3000 /* number not string */,
-    contentBase: "././src",
+    contentBase: '././src',
     overlay: {
       warnings: true,
       errors: true,
     },
-    clientLogLevel: "error",
+    clientLogLevel: 'error',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: "src/index.html",
+      filename: 'index.html',
+      template: 'src/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: "style.css",
-      chunkFilename: "[name].css",
+      filename: 'style.css',
+      chunkFilename: '[name].css',
     }),
   ],
   module: {
@@ -34,9 +34,9 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env"],
+            presets: ['@babel/preset-env'],
           },
         },
       },
@@ -48,16 +48,24 @@ module.exports = {
             use: [
               MiniCssExtractPlugin.loader,
               {
-                loader: "css-loader",
+                loader: 'css-loader',
                 options: { modules: true, exportOnlyLocals: false },
               },
-              "sass-loader",
+              'sass-loader',
             ],
           },
           {
-            use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
           },
         ],
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg|ico)$/,
+        loader: 'file-loader',
+        options: {
+          outputPath: 'images',
+          name: 'images/[path][name].[ext]',
+        },
       },
     ],
   },
