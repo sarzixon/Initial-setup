@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/scss/style.scss"],"names":[],"mappings":"AAAA;AACA;AACA,sBAAsB","file":"style.css","sourcesContent":["body {\n  height: 100%;\n  background: \"green\"; }\n"],"sourceRoot":""}
