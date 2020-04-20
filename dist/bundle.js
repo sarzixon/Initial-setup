@@ -8904,9 +8904,9 @@ function (_BaseClient) {
 
 /***/ }),
 
-/***/ "./node_modules/webpack-dev-server/client/index.js?http://localhost:8081":
+/***/ "./node_modules/webpack-dev-server/client/index.js?http://localhost:8080":
 /*!*********************************************************!*\
-  !*** (webpack)-dev-server/client?http://localhost:8081 ***!
+  !*** (webpack)-dev-server/client?http://localhost:8080 ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -9088,7 +9088,7 @@ var onSocketMessage = {
   }
 };
 socket(socketUrl, onSocketMessage);
-/* WEBPACK VAR INJECTION */}.call(this, "?http://localhost:8081"))
+/* WEBPACK VAR INJECTION */}.call(this, "?http://localhost:8080"))
 
 /***/ }),
 
@@ -9837,12 +9837,12 @@ log(_component__WEBPACK_IMPORTED_MODULE_1__["default"].color);
 
 /***/ 0:
 /*!*********************************************************************************!*\
-  !*** multi (webpack)-dev-server/client?http://localhost:8081 ./src/js/index.js ***!
+  !*** multi (webpack)-dev-server/client?http://localhost:8080 ./src/js/index.js ***!
   \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\sarza\OneDrive\Documents\school\Coding\Projects\Software House\node_modules\webpack-dev-server\client\index.js?http://localhost:8081 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:8081");
+__webpack_require__(/*! C:\Users\sarza\OneDrive\Documents\school\Coding\Projects\Software House\node_modules\webpack-dev-server\client\index.js?http://localhost:8080 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:8080");
 module.exports = __webpack_require__(/*! ./src/js/index.js */"./src/js/index.js");
 
 
