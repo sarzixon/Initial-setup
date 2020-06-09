@@ -1,1 +1,1 @@
-{"version":3,"sources":["webpack:///./src/scss/style.scss"],"names":[],"mappings":"AAAA;AACA;AACA,kBAAkB","file":"style.css","sourcesContent":["body {\n  height: 100%;\n  background: red; }\n"],"sourceRoot":""}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"style.css","sourceRoot":""}

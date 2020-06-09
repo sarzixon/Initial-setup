@@ -1,6 +1,12 @@
 const path = require('path');
+const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+
+const PATHS = {
+  src: path.join(__dirname, 'src'),
+};
 
 module.exports = {
   entry: './src/js/index.js',
@@ -26,6 +32,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.css',
       chunkFilename: '[name].css',
+    }),
+    new PurgecssPlugin({
+      paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
     }),
   ],
   module: {
@@ -64,7 +73,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           outputPath: 'images',
-          name: 'images/[path][name].[ext]',
+          name: '[name].[ext]',
         },
       },
     ],
