@@ -1,36 +1,41 @@
 {
-  "name": "serwis-it",
-  "version": "1.0.0",
-  "description": "Computer service website",
-  "main": "index.js",
+  "name": "TypeScriptInit",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": "",
+  "license": "",
+  "author": "",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.dev.js --open",
-    "build": "webpack --config webpack.config.prod.js"
+    "build": "webpack --mode=production",
+    "serve": "webpack-dev-server --mode=development --open",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix --ignore-pattern 'src/vendor/*.{js,ts,tsx}'",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Sarzixon",
-  "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^3.5.2",
-    "file-loader": "^6.0.0",
-    "html-webpack-plugin": "^4.2.0",
-    "husky": "^4.2.5",
-    "eslint": "^7.2.0",
-    "lint-staged": "^10.2.2",
-    "mini-css-extract-plugin": "^0.9.0",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "css-loader": "^4.3.0",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.4.1",
+    "mini-css-extract-plugin": "^0.11.2",
     "node-sass": "^4.14.1",
-    "prettier": "^2.0.4",
-    "purgecss-webpack-plugin": "^2.2.0",
-    "sass": "^1.26.3",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.1.4",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^4.2.2"
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.1.2",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^8.0.4",
+    "typescript": "^4.0.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0"
   },
   "husky": {
     "hooks": {
@@ -38,6 +43,10 @@
     }
   },
   "lint-staged": {
-    "*.{js,css,scss,md}": "prettier --write"
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
   }
+
 }
+
